@@ -9,6 +9,8 @@
 
     <targetVersion>0.17.1557</targetVersion>
 
-    <description>Reverses the fast forward options so they slow down the game instead. Useful for achieving a constant video framerate when the game is under heavy stress, or for slowing down combat.</description>
+    <description>Reverses the fast forward options so they slow down the game instead. Useful for achieving a constant video framerate when the game is under heavy stress, or for slowing down combat.
+	
+	To enable or disable slow mode, use the keybind (defaults to the 5 button) or the mod settings menu.</description>
 
 </ModMetaData>

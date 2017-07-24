@@ -8,8 +8,10 @@ namespace RD_SlowDown
 	{
 		static Main()
 		{
+			Log.Message("[RD_SlowDown] Initialising mod...");
 			var harmony = HarmonyInstance.Create("org.rd.slowdown");
 			harmony.PatchAll(System.Reflection.Assembly.GetExecutingAssembly());
+			Log.Message("[RD_SlowDown] Done!");
 		}
 	}
 
@@ -96,7 +98,7 @@ namespace RD_SlowDown
 			} else {
 				__result = 1 / (60f * __instance.TickRateMultiplier);
 			}
-			Log.Message(__result.ToString()+", "+Settings.EnableMod.ToString());
+			//Log.Message(__result.ToString()+", "+Settings.EnableMod.ToString());
 			return false;
 		}
 	}

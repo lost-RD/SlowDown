@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<KeyBindingDefs>
+
+	<KeyBindingDef Name="GameKeyBinding" Abstract="true">
+		<category>Game</category>
+	</KeyBindingDef>
+
+	<KeyBindingDef ParentName="GameKeyBinding">
+		<defName>SlowDown</defName>
+		<label>Slow Down: enable/disable</label>
+		<defaultKeyCodeA>Alpha5</defaultKeyCodeA>
+	</KeyBindingDef>
+
+</KeyBindingDefs>
