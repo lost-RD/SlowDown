@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
-<KeyBindingDefs>
+<Defs>
 
 	<KeyBindingDef Name="GameKeyBinding" Abstract="true">
 		<category>Game</category>
@@ -12,4 +12,4 @@
 		<defaultKeyCodeA>Alpha5</defaultKeyCodeA>
 	</KeyBindingDef>
 
-</KeyBindingDefs>
+</Defs>
