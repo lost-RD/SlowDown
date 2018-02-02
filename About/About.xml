@@ -7,7 +7,7 @@
 
     <url>https://ludeon.com/forums/index.php?topic=21938.0</url>
 
-    <targetVersion>0.17.1557</targetVersion>
+    <targetVersion>0.18.0</targetVersion>
 
     <description>Reverses the fast forward options so they slow down the game instead. Useful for achieving a constant video framerate when the game is under heavy stress, or for slowing down combat.
 	
