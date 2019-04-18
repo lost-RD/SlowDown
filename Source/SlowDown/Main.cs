@@ -16,7 +16,7 @@ namespace RD_SlowDown
 	}
 
 	[HarmonyPatch(typeof(TickManager))]
-	[HarmonyPatch("TickRateMultiplier", PropertyMethod.Getter)]
+	[HarmonyPatch("TickRateMultiplier", MethodType.Getter)]
 	public class Patch1
 	{
 		[HarmonyPrefix]
@@ -46,7 +46,7 @@ namespace RD_SlowDown
 						//__result = 1f;
 						return false;
 					case TimeSpeed.Superfast:
-						if (Find.VisibleMap == null)
+						if (Find.Maps.Count == 0)
 						{
 							__result = 150f;
 							//__result = 1f;
@@ -62,7 +62,7 @@ namespace RD_SlowDown
 						//__result = 1f;
 						return false;
 					case TimeSpeed.Ultrafast:
-						if (Find.VisibleMap == null)
+						if (Find.Maps.Count == 0)
 						{
 							__result = 250f;
 							//__result = 1f;
@@ -80,7 +80,7 @@ namespace RD_SlowDown
 	}
 
 	[HarmonyPatch(typeof(TickManager))]
-	[HarmonyPatch("CurTimePerTick", PropertyMethod.Getter)]
+	[HarmonyPatch("CurTimePerTick", MethodType.Getter)]
 	public class Patch2
 	{
 		[HarmonyPrefix]
