@@ -1,5 +1,5 @@
 ﻿using Verse;
-using Harmony;
+using HarmonyLib;
 
 namespace RD_SlowDown
 {
@@ -9,7 +9,7 @@ namespace RD_SlowDown
 		static Main()
 		{
 			Log.Message("[RD_SlowDown] Initialising mod...");
-			var harmony = HarmonyInstance.Create("org.rd.slowdown");
+			var harmony = new Harmony("org.rd.slowdown");
 			harmony.PatchAll(System.Reflection.Assembly.GetExecutingAssembly());
 			Log.Message("[RD_SlowDown] Done!");
 		}
