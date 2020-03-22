@@ -1,9 +1,13 @@
 # SlowDown
 RimWorld mod
 
-Changes the speed-up function to a slow-down function.
+Changes the speed-up function to a slow-down function. Toggle it with a key, default is 5. Each speed becomes the inverse of before - instead of doubling, it halves.
 
 ## Changelog:
+
+### Build 4_20200322
+* Tested on 1.1.2579
+* Theoretically should also still work for that latest 1.0 version too
 
 ### Build 3_20190418 (targets 1.0.2231)
 * Update to 1.0.x

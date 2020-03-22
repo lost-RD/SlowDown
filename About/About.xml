@@ -3,15 +3,17 @@
 
     <name>RD - Slow Down</name>
     <author>lost_RD</author>
-    <url>https://ludeon.com/forums/index.php?topic=21938.0</url>
-    <packageId>LostRD.SlowDown</packageId>
+    <url>https://github.com/lost-RD/SlowDown</url>
+    <packageId>lost_rd.slowdown</packageId>
     <supportedVersions>
         <li>1.0</li>
         <li>1.1</li>
     </supportedVersions>
 
-    <description>Reverses the fast forward options so they slow down the game instead. Useful for achieving a constant video framerate when the game is under heavy stress, or for slowing down combat.
+    <description>Inverts the fast forward options so they slow down the game instead. Useful for achieving a constant video framerate when the game is under heavy stress, or for slowing down combat if you'd prefer not to pause.
 	
-	To enable or disable slow mode, use the keybind (defaults to the 5 button) or the mod settings menu.</description>
+	To enable or disable slow mode, use the keybind (defaults to the 5 button) or the mod settings menu.
+    
+    Latest update: 1.1 support, also should still work on 1.0.</description>
 
 </ModMetaData>
