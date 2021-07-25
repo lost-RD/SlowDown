@@ -5,6 +5,9 @@ Changes the speed-up function to a slow-down function. Toggle it with a key, def
 
 ## Changelog:
 
+### Build 5_20210725
+* Compiled for 1.2
+
 ### Build 4_20200322
 * Tested on 1.1.2579
 * Theoretically should also still work for that latest 1.0 version too
