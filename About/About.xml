@@ -16,9 +16,9 @@
 
 To enable or disable slow mode, use the keybind (defaults to the 5 button). See the mod settings menu to disable the keybind or to enable Hardcore Mode. You'll know when slow mode is enabled because the GUI buttons go red.
 
-Hardcore Mode: pausing is disabled! The pause button now cycles between the three (slow) speeds. 
+Hardcore Mode: pausing is disabled! The pause button now cycles between the three (slow) speeds and you can even disable the slower speeds if you want. 
 
-Latest update: Hardcore mode added, speed buttons are red when slow mode is enabled.</description>
+Latest update: Hardcore (no-pause) mode added, speed buttons are red when slow mode is enabled.</description>
 
     <modDependencies>
         <li>
