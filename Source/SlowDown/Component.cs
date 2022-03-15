@@ -13,7 +13,7 @@ namespace RD_SlowDown
 		public SlowDown()
 		{
 			Log.Message("[RD_SlowDown] I never saw this message in testing, lucky you!");
-			if (Settings.HardcoreMode)
+			if (Settings.isHardcore)
 			{
 				Settings.Slowed = true;
 			}
@@ -33,7 +33,7 @@ namespace RD_SlowDown
 				{
 					if (toggleKey.KeyDownEvent)
 					{
-						if (!Settings.HardcoreMode)
+						if (Settings.isEnabled)
 						{
 							Settings.ToggleSlow();
 							if (Find.TickManager.CurTimeSpeed != TimeSpeed.Paused)
@@ -45,12 +45,12 @@ namespace RD_SlowDown
 					}
 					else if (pauseKey.KeyDownEvent)
 					{
-						if (Settings.HardcoreMode == true)
+						if (Settings.isHardcore)
 						{
 							Settings.Slowed = true;
 							TimeSpeed ts = Find.TickManager.CurTimeSpeed;
 							ts++;
-							if (((byte)ts) > 0x03)
+							if (((int)ts) > Settings.maxTimeSpeed)
 							{
 								ts = TimeSpeed.Normal;
 							}
