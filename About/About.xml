@@ -16,7 +16,7 @@
 
 To enable or disable slow mode, use the keybind (defaults to the 5 button) or the mod settings menu.
 
-Latest update: 1.3 support</description>
+Latest update: Hardcore mode added, speed buttons are red when slow mode is enabled.</description>
 
     <modDependencies>
         <li>

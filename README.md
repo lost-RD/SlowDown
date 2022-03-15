@@ -5,6 +5,12 @@ Changes the speed-up function to a slow-down function. Toggle it with a key, def
 
 ## Changelog:
 
+### Build 7_20220315
+* Added Hardcore mode
+  * Pause button cycles between speeds of slowness
+* Changed GUI buttons to be red while slowed
+* General codebase improvements
+
 ### Build 6_20210725
 * Compiled for 1.3
 

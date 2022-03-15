@@ -8,15 +8,21 @@ namespace RD_SlowDown
 	public class SlowDown : GameComponent
 	{
 		internal KeyBindingDef toggleKey;
+		internal KeyBindingDef pauseKey;
 
 		public SlowDown()
 		{
 			Log.Message("[RD_SlowDown] I never saw this message in testing, lucky you!");
+			if (Settings.HardcoreMode)
+			{
+				Settings.Slowed = true;
+			}
 		}
 
 		public SlowDown( Game game )
 		{
 			toggleKey = KeyBindingDef.Named("SlowDown");
+			pauseKey = KeyBindingDefOf.TogglePause;
 		}
 
 		public override void GameComponentOnGUI()
@@ -27,8 +33,30 @@ namespace RD_SlowDown
 				{
 					if (toggleKey.KeyDownEvent)
 					{
-						Settings.Toggle();
+						if (!Settings.HardcoreMode)
+						{
+							Settings.ToggleSlow();
+							if (Find.TickManager.CurTimeSpeed != TimeSpeed.Paused)
+							{
+								Find.TickManager.CurTimeSpeed = TimeSpeed.Normal;
+							}
+						}
 						Event.current.Use();
+					}
+					else if (pauseKey.KeyDownEvent)
+					{
+						if (Settings.HardcoreMode == true)
+						{
+							Settings.Slowed = true;
+							TimeSpeed ts = Find.TickManager.CurTimeSpeed;
+							ts++;
+							if (((byte)ts) > 0x03)
+							{
+								ts = TimeSpeed.Normal;
+							}
+							Find.TickManager.CurTimeSpeed = ts;
+							Event.current.Use();
+						}
 					}
 				}
 			}

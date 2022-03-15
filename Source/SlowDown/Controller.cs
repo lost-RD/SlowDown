@@ -22,6 +22,7 @@ namespace RD_SlowDown
 			list.Begin(inRect);
 			list.Gap();
 			list.CheckboxLabeled("Enable mod", ref Settings.EnableMod, "Enabled = slow, disabled = fast");
+			list.CheckboxLabeled("Hardcore mode: disable pause", ref Settings.HardcoreMode, "Enabled = hardcore, disabled = normal");
 			list.End();
 		}
 
