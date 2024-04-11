@@ -115,6 +115,7 @@ namespace RD_SlowDown
 
 	[HarmonyPatch(typeof(TimeControls))]
 	[HarmonyPatch("DoTimeControlsGUI", MethodType.Normal)]
+	[StaticConstructorOnStartup]
 	public class Patch3
 	{
 		public static Traverse tc = Traverse.CreateWithType("TimeControls");

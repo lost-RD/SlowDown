@@ -49,7 +49,7 @@ namespace RD_SlowDown
 			list.Gap(list.verticalSpacing);
 
 			list.CheckboxLabeled("Enable mod", ref Settings.EnableMod, "Enabled or disable all features of the mod");
-			list.CheckboxLabeled("Disable forced normal", ref Settings.DisableForcedNormal, "Forced normal speed happens on some letters");
+			list.CheckboxLabeled("Disable forced normal", ref Settings.DisableForcedNormal, "Some letters disable time controls, such as raids. Turn this on to disable this behaviour.");
 			float h = list.CurHeight-list.verticalSpacing;
 			list.CheckboxLabeled("Hardcore mode: disable pause", ref Settings.HardcoreMode, "Enabled = hardcore, disabled = normal");
 			

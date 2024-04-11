@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29911.84
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlowDown", "SlowDown.csproj", "{AD00D0FB-9166-44FA-884F-58396061C6F6}"
 EndProject
@@ -11,6 +11,7 @@ Global
 		1.1|Any CPU = 1.1|Any CPU
 		1.2|Any CPU = 1.2|Any CPU
 		1.3|Any CPU = 1.3|Any CPU
+		1.4|Any CPU = 1.4|Any CPU
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
@@ -23,6 +24,8 @@ Global
 		{AD00D0FB-9166-44FA-884F-58396061C6F6}.1.2|Any CPU.Build.0 = 1.2|Any CPU
 		{AD00D0FB-9166-44FA-884F-58396061C6F6}.1.3|Any CPU.ActiveCfg = 1.3|Any CPU
 		{AD00D0FB-9166-44FA-884F-58396061C6F6}.1.3|Any CPU.Build.0 = 1.3|Any CPU
+		{AD00D0FB-9166-44FA-884F-58396061C6F6}.1.4|Any CPU.ActiveCfg = 1.4|Any CPU
+		{AD00D0FB-9166-44FA-884F-58396061C6F6}.1.4|Any CPU.Build.0 = 1.4|Any CPU
 		{AD00D0FB-9166-44FA-884F-58396061C6F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AD00D0FB-9166-44FA-884F-58396061C6F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD00D0FB-9166-44FA-884F-58396061C6F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
