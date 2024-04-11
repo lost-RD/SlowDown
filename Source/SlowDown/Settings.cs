@@ -23,7 +23,7 @@ namespace RD_SlowDown
 			Scribe_Values.Look(ref EnableMod, "EnableMod", false);
 			Scribe_Values.Look(ref HardcoreMode, "HardcoreMode", false);
 			Scribe_Values.Look(ref Slowed, "Slowed", false);
-			Scribe_Values.Look(ref Slowed, "DisableForcedNormal", false);
+			Scribe_Values.Look(ref DisableForcedNormal, "DisableForcedNormal", false);
 			Scribe_Values.Look<int>(ref maxTimeSpeed, "maxTimeSpeed", 3);
 		}
 
