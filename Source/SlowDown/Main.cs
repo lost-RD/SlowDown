@@ -174,12 +174,15 @@ namespace RD_SlowDown
 			GUI.EndGroup();
 			GenUI.AbsorbClicksInRect(timerRect);
 			UIHighlighter.HighlightOpportunity(timerRect, "TimeControls");
+
+			Traverse method_to_play_sound = null;
+
 			if (Event.current.type == EventType.KeyDown)
 			{
 				if (KeyBindingDefOf.TogglePause.KeyDownEvent)
 				{
 					Find.TickManager.TogglePaused();
-					tc.Method("PlaySoundOf", Find.TickManager.CurTimeSpeed);
+					method_to_play_sound = tc.Method("PlaySoundOf", Find.TickManager.CurTimeSpeed);
 					PlayerKnowledgeDatabase.KnowledgeDemonstrated(ConceptDefOf.Pause, KnowledgeAmount.SpecificInteraction);
 					Event.current.Use();
 				}
@@ -188,7 +191,7 @@ namespace RD_SlowDown
 					if (KeyBindingDefOf.TimeSpeed_Normal.KeyDownEvent)
 					{
 						Find.TickManager.CurTimeSpeed = TimeSpeed.Normal;
-						tc.Method("PlaySoundOf", Find.TickManager.CurTimeSpeed);
+						method_to_play_sound = tc.Method("PlaySoundOf", Find.TickManager.CurTimeSpeed);
 						PlayerKnowledgeDatabase.KnowledgeDemonstrated(ConceptDefOf.TimeControls, KnowledgeAmount.SpecificInteraction);
 						Event.current.Use();
 					}
@@ -197,7 +200,7 @@ namespace RD_SlowDown
 						if (Settings.isDisabledOrSoftcore || (Settings.HardcoreMode && Settings.maxTimeSpeed >= 2 || !Settings.Slowed))
 						{
 							Find.TickManager.CurTimeSpeed = TimeSpeed.Fast;
-							tc.Method("PlaySoundOf", Find.TickManager.CurTimeSpeed);
+							method_to_play_sound = tc.Method("PlaySoundOf", Find.TickManager.CurTimeSpeed);
 							PlayerKnowledgeDatabase.KnowledgeDemonstrated(ConceptDefOf.TimeControls, KnowledgeAmount.SpecificInteraction);
 							Event.current.Use();
 						}
@@ -207,7 +210,7 @@ namespace RD_SlowDown
 						if (Settings.isDisabledOrSoftcore || (Settings.HardcoreMode && Settings.maxTimeSpeed >= 3 || !Settings.Slowed))
 						{
 							Find.TickManager.CurTimeSpeed = TimeSpeed.Superfast;
-							tc.Method("PlaySoundOf", Find.TickManager.CurTimeSpeed);
+							method_to_play_sound = tc.Method("PlaySoundOf", Find.TickManager.CurTimeSpeed);
 							PlayerKnowledgeDatabase.KnowledgeDemonstrated(ConceptDefOf.TimeControls, KnowledgeAmount.SpecificInteraction);
 							Event.current.Use();
 						}
@@ -220,7 +223,7 @@ namespace RD_SlowDown
 						if (Settings.isDisabledOrSoftcore || (Settings.HardcoreMode && Settings.maxTimeSpeed >= 4 || !Settings.Slowed))
 						{
 							Find.TickManager.CurTimeSpeed = TimeSpeed.Ultrafast;
-							tc.Method("PlaySoundOf", Find.TickManager.CurTimeSpeed);
+							method_to_play_sound = tc.Method("PlaySoundOf", Find.TickManager.CurTimeSpeed);
 							Event.current.Use();
 						}
 					}
@@ -231,6 +234,8 @@ namespace RD_SlowDown
 					}
 				}
 			}
+			if (method_to_play_sound != null) { method_to_play_sound.GetValue(); }
+
 			return false;
 		}
 	}
