@@ -9,6 +9,7 @@ namespace RD_SlowDown
 		internal static bool Slowed = false;
 		internal static bool DisableForcedNormal = false;
 		internal static int maxTimeSpeed = 3;
+		internal static bool SlowestToTheLeft = false;
 
 		public static void ToggleSlow()
 		{
@@ -25,6 +26,7 @@ namespace RD_SlowDown
 			Scribe_Values.Look(ref Slowed, "Slowed", false);
 			Scribe_Values.Look(ref DisableForcedNormal, "DisableForcedNormal", false);
 			Scribe_Values.Look<int>(ref maxTimeSpeed, "maxTimeSpeed", 3);
+			Scribe_Values.Look(ref SlowestToTheLeft, "SlowestToTheLeft", false);
 		}
 
 		public static bool isEnabled
@@ -44,17 +46,27 @@ namespace RD_SlowDown
 
 		public static bool isHardcoreOrSlowed
 		{
-			get { return Settings.isHardcore || Settings.isSlowed; }
+			get { return isHardcore || isSlowed; }
 		}
 
 		public static bool isHardcoreAndSlowed
 		{
-			get { return Settings.isHardcore && Settings.isSlowed; }
+			get { return isHardcore && isSlowed; }
 		}
 
 		public static bool isDisabledOrSoftcore
 		{
-			get { return !Settings.HardcoreMode || !Settings.EnableMod; }
+			get { return !Settings.HardcoreMode || !isEnabled; }
+		}
+
+		public static bool isSlowestToTheLeft
+		{
+			get { return Settings.SlowestToTheLeft; }
+		}
+
+		public static bool isDefaultSpeedOrder
+		{
+			get { return !Settings.SlowestToTheLeft; }
 		}
 	}
 }

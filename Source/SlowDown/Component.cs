@@ -38,7 +38,14 @@ namespace RD_SlowDown
 							Settings.ToggleSlow();
 							if (Find.TickManager.CurTimeSpeed != TimeSpeed.Paused)
 							{
-								Find.TickManager.CurTimeSpeed = TimeSpeed.Normal;
+								if (Settings.isSlowed)
+								{
+									Find.TickManager.CurTimeSpeed = Settings.isDefaultSpeedOrder ? TimeSpeed.Normal : TimeSpeed.Superfast;
+								}
+								else
+								{
+									Find.TickManager.CurTimeSpeed = TimeSpeed.Normal;
+								}
 							}
 						}
 						Event.current.Use();
