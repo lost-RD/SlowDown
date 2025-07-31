@@ -50,9 +50,10 @@ namespace RD_SlowDown
 
 			list.CheckboxLabeled("Enable mod", ref Settings.EnableMod, "Enabled or disable all features of the mod");
 			list.CheckboxLabeled("Disable forced normal", ref Settings.DisableForcedNormal, "Some letters disable time controls, such as raids. Turn this on to disable this behaviour.");
-			float h = list.CurHeight-list.verticalSpacing;
 			list.CheckboxLabeled("Hardcore mode: disable pause", ref Settings.HardcoreMode, "Enabled = hardcore, disabled = normal");
-			
+			float h = list.CurHeight-list.verticalSpacing;
+			list.CheckboxLabeled("Slowest to the left", ref Settings.SlowestToTheLeft, "1 is the slowest speed, either normal or superslow, and speed increases to the right.");
+
 			list.ColumnWidth = inRect.width * (2f / 5f);
 			list.Label("Slowest Hardcore speed: "+label, -1, "This is the slowest speed you'll be allowed to use during Hardcore");
 
